@@ -26,6 +26,18 @@ begin
   end; 
 end;
 
+function SeconsInHours(h: integer): integer;
+begin
+    var count := 0;
+    for var i := 1 to h do
+    begin
+        count += 60;
+        result := count;
+    end;
+end;
+
+
+
 begin
   
 end.
