@@ -5,6 +5,26 @@ begin
     if y mod 400 = 0 then result := True;
 end;
 
+function LaterInYear(d1, m1, d2, m2: integer): integer;
+begin
+  if (m1 > m2) then result:= d1 
+  else if (m1 < m2) then result := d2 
+  else
+    if (d1 > d2) then result:= d1
+  else
+    if (d2 > d1) then result:= d2
+  else result:= d1;
+end;
+
+function DaysInYearRange(y1, y2: integer): integer; 
+begin 
+  var count := 0; 
+  for var i := y1 to y2 do 
+  begin 
+    count += DaysInYear(i); 
+    result := count; 
+  end; 
+end;
 
 begin
   
