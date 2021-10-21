@@ -5,8 +5,6 @@ begin
     if y mod 400 = 0 then result := True;
 end;
 
-function SecondInMinute(): integer := 60;
-
 
 begin
   
